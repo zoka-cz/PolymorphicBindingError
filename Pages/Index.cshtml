@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+	<div class="col-md-4">
+		<form method="POST">
+			<div asp-validation-summary="All"></div>
+
+			<div class="form-group">
+				@Html.EditorFor(m => m.PolymorphicModels.Tester.PolymorphicModels[0].Model)
+			</div>
+
+			<div class="form-group">
+				@Html.EditorFor(m => m.PolymorphicModels.Tester.PolymorphicModels[1].Model)
+			</div>
+
+
+			<button type="submit" class="btn btn-primary">Add</button>
+		</form>
+	</div>
+</div>
